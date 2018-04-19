@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>		
+<body>
+
+
+
+<form name="form">
+Quantos KM você anda por mês: <br/>
+<input type=number name="km">
+<br/><br/>
+Preços: <br/>
+Etanol ou Gasolina: 
+<input type=number name="p1"><br/>
+GNV: 
+<input type=number name="p2"><br/>
+<br/>
+Rendimentos: <br/>
+Etanol: 
+<input type=number name="r1"><br/>
+Gasolina: 
+<input type=number name="r2"><br/>
+GNV: 
+<input type=number name="r3"><br/>
+Valor do kit GNV: <input type=number name="kit"><br/>
+
+<input type=button value="Calcular" onclick="calcular()">
+
+
+</form>
+<br>
+<div id="rendimento"></div>
+<canvas id="chartRendimento" width="400" height="100"></canvas>
+<br/>
+<div id="consumo"></div>
+<canvas id="chartConsumo" width="400" height="100"></canvas>
+<br/>
+<div id="custo"></div>
+<canvas id="chartCusto" width="400" height="100"></canvas>
+<br/>
+<div id ="economia"></div>
+<br/>
+<div id="ecKit"></div><br/>
+<br/>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+	<script src="funcao.js"></script>
+  </body>
+</html>
+
+
