@@ -47,10 +47,10 @@ function Combustivel(p, r) {
 	}
 	
 function calcular() {
-    	/*if(form.km.value == '' || form.p1.value == '' || form.p2.value == '' || form.kit.value == '') {
+    	if(form.km.value == '' || form.p1.value == '' || form.p2.value == '' || form.kit.value == '') {
         	alert('Preencha os campos!');
         	return;
-        }*/
+        }
 		
         var p1 = parseFloat(form.p1.value);
     	var p2 = parseFloat(form.p2.value); 

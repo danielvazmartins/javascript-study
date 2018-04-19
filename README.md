@@ -19,3 +19,4 @@ http-server . (na pasta do html principal)
 -- Moment.js - https://momentjs.com/
 -- Axios - https://github.com/axios/axios
 -- Google Charts - https://developers.google.com/chart/
+-- XMLHttpRequest - Ajax usando javascript puro
