@@ -28,7 +28,7 @@ function Combustivel(p, r) {
 		
 		this.calculaEconomia = function(c) {
 			var economia = c.getCusto() - custo;
-			return (economia > 0)?economia:-economia; 
+			return ((economia > 0) ? economia : -economia).toFixed(2); 
 		}
 		
 		this.getRendimento = function() {
@@ -95,18 +95,19 @@ function calcular() {
 		
 		rend.innerHTML =
 			"<font color = blue>RENDIMENTO</font> <br/>" + rC + ": " + comb.getRendimento() + " km/L<br/>GNV: " + gnv.getRendimento() + " km/L";
-			drawChart(chartRendimento, 'Km/L ou Km/m³', 'Gasolina', 'GNV', comb.getRendimento(), gnv.getRendimento());
+			drawChart(chartRendimento, 'Km/L ou Km/m³', rC, 'GNV', comb.getRendimento(), gnv.getRendimento());
 
 		con.innerHTML =
 			"<font color = blue>CONSUMO MENSAL</font> <br/>" + rC + ": " + separaCasas(comb.getConsumo()) + " L<br/>GNV: " + separaCasas(gnv.getConsumo()) + "L";
-			drawChart(chartConsumo, 'L ou m³', 'Gasolina', 'GNV', separaCasas(comb.getConsumo()), separaCasas(gnv.getConsumo()));
+			drawChart(chartConsumo, 'L ou m³', rC, 'GNV', separaCasas(comb.getConsumo()), separaCasas(gnv.getConsumo()));
 			
 		custo.innerHTML =
 			"<font color = blue>CUSTO EM REAIS</font> <br/>" + rC + ": " + separaCasas(comb.getCusto()) + "<br/>GNV: R$ " + separaCasas(gnv.getCusto());
-			drawChart(chartCusto, 'R$', 'Gasolina', 'GNV', separaCasas(comb.getCusto()), separaCasas(gnv.getCusto()));
+			drawChart(chartCusto, 'R$', rC, 'GNV', separaCasas(comb.getCusto()), separaCasas(gnv.getCusto()));
 		
 		economia.innerHTML =
-		 	"<font color=steelblue size=3>Sua economia</font><br/><hr/><p/><font color=green> Economia Mensal (em %) </font><br/>GNV X " + rC + ": " + gnv.comparar(comb);
+		 	"<font color=steelblue size=3>Sua economia</font><br/><hr/><p/><font color=green> Economia Mensal (em %) </font><br/>GNV X " + rC + ": " + gnv.comparar(comb) + 
+		 	"<br/><font color=green> Economia Mensal (R$) </font><br/>GNV X " + rC + ": " + gnv.calculaEconomia(comb)
 		 
         eKit.innerHTML = 
 		 	"<font color=steelblue size=3>Tempo de retorno do KIT GNV (em meses): </font><hr/><p/>GNV X " + rC + ": " + (kit / gnv.calculaEconomia(comb)).toFixed(1) + " meses"; 

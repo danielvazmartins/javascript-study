@@ -9,27 +9,25 @@
 
 
 <form name="form">
-Quantos KM você anda por mês: <br/>
-<input type=number name="km">
-<br/><br/>
-Preços: <br/>
-Etanol ou Gasolina: 
-<input type=number name="p1"><br/>
-GNV: 
-<input type=number name="p2"><br/>
-<br/>
-Rendimentos: <br/>
-Etanol: 
-<input type=number name="r1"><br/>
-Gasolina: 
-<input type=number name="r2"><br/>
-GNV: 
-<input type=number name="r3"><br/>
-Valor do kit GNV: <input type=number name="kit"><br/>
+	Quantos KM você anda por mês: <br/>
+	<input type="tel" name="km" onkeyup="mascara(this, soValores)">
+	<br/><br/>
+	Preços: <br/>
+	Etanol ou Gasolina: 
+	<input type="tel" name="p1" maxlength="5" onkeyup="mascara(this, maskMoney)"><br/>
+	GNV: 
+	<input type="tel" name="p2" maxlength="5" onkeyup="mascara(this, maskMoney)"><br/>
+	<br/>
+	Rendimentos: <br/>
+	Etanol: 
+	<input type="tel" name="r1" onkeyup="mascara(this, soValores)"><br/>
+	Gasolina: 
+	<input type="tel" name="r2" onkeyup="mascara(this, soValores)"><br/>
+	GNV: 
+	<input type="tel" name="r3" onkeyup="mascara(this, soValores)"><br/>
+	Valor do kit GNV: <input type=tel" name="kit" onkeyup="mascara(this, soValores)"><br/>
 
-<input type=button value="Calcular" onclick="calcular()">
-
-
+	<input type=button value="Calcular" onclick="calcular()">
 </form>
 <br>
 <div id="rendimento"></div>
@@ -47,7 +45,8 @@ Valor do kit GNV: <input type=number name="kit"><br/>
 <br/>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-	<script src="funcao.js"></script>
+	<script type="text/javascript" src="mascaras.js"></script>
+	<script type="text/javascript" src="funcao.js"></script>
   </body>
 </html>
 
