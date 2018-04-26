@@ -52,8 +52,8 @@ function calcular() {
         	return;
         }
 		
-        var p1 = parseFloat(form.p1.value);
-    	var p2 = parseFloat(form.p2.value); 
+        var p1 = strToFloat(form.p1.value);
+    	var p2 = strToFloat(form.p2.value); 
 		
 		var rC;
 		var rGNV;
@@ -61,14 +61,14 @@ function calcular() {
 		
 		if(form.r1.value != '' && form.r2.value == '') {
 			
-			r = parseFloat(form.r1.value);
+			r = strToFloat(form.r1.value);
 			rC = "Etanol";
 			rGNV = r * 1.45;
 			
 			
 		} else if(form.r2.value != '' && form.r1.value == '') {
 			
-			r = parseFloat(form.r2.value);
+			r = strToFloat(form.r2.value);
 			rC = "Gasolina";
 			rGNV = r * 1.25;
 			
@@ -79,7 +79,7 @@ function calcular() {
      
         var gnv = new Combustivel(p2, rGNV);
         var comb = new Combustivel(p1, r);
-    	var kit = parseFloat(form.kit.value);
+    	var kit = strToFloat(form.kit.value);
 		
 		document.getElementById(form.r3.value = rGNV);
 		
@@ -142,6 +142,9 @@ function drawChart(canvas, title, label1, label2, data1, data2) {
 	});
 }
 
+function strToFloat(string) {
+	return parseFloat(string.replace(/,/g,'.'));
+}
 
 
 
