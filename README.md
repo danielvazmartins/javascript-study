@@ -20,3 +20,4 @@ http-server . (na pasta do html principal)
 -- Axios - https://github.com/axios/axios
 -- Google Charts - https://developers.google.com/chart/
 -- XMLHttpRequest - Ajax usando javascript puro
+-- Fetch - Fazendo requisições ajax usando a API Fetch do javascript - https://developers.google.com/web/updates/2015/03/introduction-to-fetch
