@@ -21,3 +21,5 @@ http-server . (na pasta do html principal)
 -- Google Charts - https://developers.google.com/chart/
 -- XMLHttpRequest - Ajax usando javascript puro
 -- Fetch - Fazendo requisições ajax usando a API Fetch do javascript - https://developers.google.com/web/updates/2015/03/introduction-to-fetch
+-- Facebook Login with Javascript SDK - https://developers.facebook.com/docs/facebook-login/web
+-- Facebook Login without SDK - https://developers.facebook.com/docs/facebook-login/manually-build-a-login-flow
